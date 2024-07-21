@@ -1,0 +1,11 @@
+name: FarmRecipes
+version: '${project.version}'
+main: com.venned.farmrecipes.FarmRecipes
+api-version: '1.20'
+depend: [SuperiorSkyblock2, NBTAPI]
+softdepend: [ManticHoes, JetsMinions]
+
+commands:
+  isfarm:
+    description: View all commands regarding farming crops
+    usage: not recognized, try /isfarm help

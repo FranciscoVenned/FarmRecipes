@@ -1,0 +1,121 @@
+farming-crops:
+  wheat: #name seeds
+    name: "Wheat"
+    slot: 0
+    item: wheat
+    to-harvest: "wheat"
+    default: true
+  potatoes:
+    name: "Potato"
+    slot: 1
+    priority: 2
+    to-harvest: "wheat"
+    item: potato
+    harvests-needed: 20
+  carrots:
+    name: "Carrot"
+    slot: 2
+    priority: 3
+    to-harvest: "potatoes"
+    item: carrot
+    harvests-needed: 20
+  nether_wart:
+    name: "Nether Warts"
+    slot: 3
+    priority: 4
+    to-harvest: "carrots"
+    item: nether_wart
+    harvests-needed: 20
+  cocoa:
+    name: "Cocoa Beans"
+    slot: 4
+    priority: 5
+    to-harvest: "nether_wart"
+    item: cocoa_beans
+    harvests-needed: 40
+  melon:
+    name: "Melon"
+    slot: 5
+    priority: 6
+    to-harvest: "cocoa"
+    item: melon_seeds
+    harvests-needed: 130
+  pumpkin:
+    name: "Pumpkin"
+    slot: 6
+    priority: 7
+    to-harvest: "melon"
+    item: pumpkin_seeds
+    harvests-needed: 140
+  sugar_cane:
+    name: "Sugarcane"
+    slot: 7
+    priority: 8
+    to-harvest: "pumpkin"
+    item: sugar_cane
+    harvests-needed: 150
+
+farming-crop-seeds-map:
+  wheat_seeds: wheat
+  potato: potatoes
+  carrot: carrots
+  nether_wart: nether_wart
+  cocoa_beans: cocoa
+  melon_seeds: melon
+  pumpkin_seeds: pumpkin
+  sugar_cane: sugar_cane
+  beetroot_seeds: beetroots
+
+farming-crop-seeds-map-2:
+  wheat: wheat_seeds
+  potato: potatoes
+  carrot: carrots
+  nether_wart: nether_wart
+
+recipe-item:
+  material: paper
+  data: 0
+  glow: true
+  name: "&a<crop> item"
+  lore:
+    - "&7Unlock the carrot <crop>"
+
+recipe-piece:
+  material: PAPER
+  name: "&6Recipe Piece - <crop>"
+  lore:
+    - "&7Combine 7 pieces to"
+    - "&7craft a full <crop> recipe."
+
+inventory:
+  size: 18
+  name: "&8Farming"
+  fill-inventory: true
+
+  filler-item:
+    material: "stained_glass_pane"
+    data: 7
+
+  farming-crop-item:
+    name: "&a&l<crop>"
+    lore:
+      - "&7To advance you must harvest &a&n<crop>&r &7in"
+      - "&7your island"
+      - ""
+      - "&e<crops-harvested> &7/ &a<crops-harvested-required>"
+      - ""
+      - "<status>"
+
+# DAY LIMIT SYSTEM
+day: 1
+time-day: 1564899789
+limit-base: 30
+
+messages:
+  limit-reached: "&c&l(!) &cLimit Reached"
+  crop-locked: "&c&l(!) &cThis crop is locked. You must unlock <crop> crop first &7(/is farming)"
+  crop-unlocked: "&a&l(!) &aYou and your island have now unlocked <crop>"
+  recipe-received: "&a&l(!) &aYou have received a <crop> recipe!"
+  not-on-island: "&c&l(!) &cYou must be on your island to do this!"
+  used-recipe: "&a&l(!) &aYou have unlocked the <crop> crop"
+  already-unlocked: "&c&l(!) &cYou have already unlocked this recipe!"
